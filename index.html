@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="logo" onclick="toApp()"></div>
+      <div class="top">THU NHẬP BỔ SUNG</div>
+      <div class="one flex1">
+        <div class="text1">BẠN CÓ MUỐN</div>
+        <div class="text1">KIẾM TIỀN</div>
+        <div class="text1">CHỈ VỚI</div>
+        <div class="text1">MỘT CHIẾC</div>
+        <div class="text1">ĐIỆN THOẠI?</div>
+        <div class="text2">
+          Kiếm tiền mọi lúc, <br />
+          mọi nơi！
+        </div>
+        <div class="btn" onclick="toApp()">Kiếm tiền nhờ sử dụng ZALO: <span id="phone"></span></div>
+      </div>
+      <div class="two item" style="margin-top: 24px">
+        <div class="twoBg"></div>
+        <div class="text3">
+          Bokamoso người Zambia là một nhân viên văn phòng bình thường. Mỗi tháng, lương của anh ta chỉ khoảng 4000R, tuy nhiên anh ấy lại có thể kiếm thêm hơn 40,000R nhờ chiếc điện thoại của mình.
+          Điều này làm cho cuộc sống của anh ta tốt hơn rất nhiều, bạn bè cũng vô cùng ganh tỵ với anh ta.
+        </div>
+      </div>
+      <div class="three item">
+        <div class="threeBg"></div>
+        <div class="text3">Amogelang là một người nội trợ trong gia đình, hầu như chỉ làm thêm tại nhà nhưng chỉ hơn một tháng cô ấy đã mua được chiếc xe yêu thích và làm giàu cho cả gia đình.</div>
+      </div>
+      <div class="four item">
+        <div class="fourBg"></div>
+        <div class="text3">
+          Karabou là sinh viên mới tốt nghiệp. Anh ta mất 3 tháng làm đại lý quảng bá cho một trung tâm mua sắm trực tuyến để kiếm được một khoản hoa hồng hậu hĩnh, đủ để mua Dahou xinh đẹp của anh
+          ấy.
+        </div>
+      </div>
+      <div class="five item">
+        <div class="fiveBg"></div>
+        <div class="text3">
+          Những người giàu có kể trên có nhiều thời gian hơn để tận hưởng những bãi biển và biệt thự, nhưng bạn cũng có thể làm được điều đó. Thay vì chờ đợi hãy liên hệ với chúng tôi để tìm kiếm cơ
+          hội cho chính mình. Những người tin tưởng vào chúng tôi tất cả đều đã thành công.
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var arr = ["pearl776", "pearl777", "kimi777"];
+      function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min; //不含最大值，含最小值
+      }
+      function toApp() {
+        window.location.href = `https://zalo.me/${phone}`;
+      }
+      var index = getRandomInt(0, 3);
+      var phone = arr[index];
+      var element = document.getElementById("phone");
+      element.innerText = phone;
+    </script>
+  </body>
+</html>
